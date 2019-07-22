@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>DiDacTex</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0">
+      <link rel="stylesheet" href="style/main.css" />
+      <link rel="stylesheet" href="lib/leaflet-1.3/dist/leaflet.css" />
+      <link rel="stylesheet" href="lib/leaflet.markercluster-1.4/dist/MarkerCluster.css" />
+      <link rel="stylesheet" href="lib/leaflet.markercluster-1.4/dist/MarkerCluster.Default.css" />
+      <link rel="stylesheet" href="lib/leaflet.awesomemarkers/leaflet.awesome-markers.css" />
+      <!--<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">-->
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="static/images/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+   </head>
+   <body>
+      <div class="navbar">
+         <div class="logo-container">
+            <a class="logo" href="#"><h1>DiDacTex ToughBucket Demo</h1></a>
+         </div>
+      </div>
+      <div class="mappanel">
+         <div id="map" class="map">
+
+         </div>
+      </div>
+
+      <div id="resultspanel" class="resultspanel">
+         <div class="contentpanel searchpanel">
+            <div id="custom-templates">
+              <p> Assumed data provided as a toughdata.csv file.</p>
+              <p> Author: Evelyn J. Boettcher</p>
+              <p> email: ejb@DiDacTex.com</p>
+            </br>
+            <h4> Bucket Tracking:</h4>
+              <p>Select a Bucket to see / change its info <br/></p>
+              <p>
+              <input class="typeahead" id="Input_00" type="text" placeholder="Phone/Frequency" />
+              <select id="Icon_00" >
+                <option value=touchbucket>Tough Bucket
+                <option value=dredbucket>DRED Bucket
+                <option value=specialbucket>Special Bucket
+                <option value=female_blue>Blue Female
+                <option value=female_red>Red Female
+                <option value=male_blue>Blue male
+                <option value=male_red>Red male
+                <option value=Calboard>Calibration Board
+                <option value=beans>Beans
+              </select></p>
+              <p> Latitude/Longitude: <br/>
+              <input class="typeahead" id="Input_lat" type="text" placeholder=" Latitude" />
+              <input class="typeahead" id="Input_long" type="text" placeholder=" Longitude" />
+            </p>
+              <select id="Active_00" >
+                <option value=YES>Active
+                <option value=NO>Not Active
+                <option value=NA>Not Applicable
+              </select>
+              <button id="add_marker-button" enabled class="btn btn-success">Add Bucket</button>
+            </p>
+
+
+            </div>
+            <div class="results">
+               <p class="result-text" id="selectedAddress"></p>
+
+            </div>
+            <hr />
+         </div>
+
+         <div id="intropanel" class="intropanel">
+            <div class="introcontainer">
+               <h1>DRED Location</h1>
+               <p class="intro-paragraph"><strong>DiDacTex</strong> tool to display multiple users/bucket
+               </br> Need users/bucket locations saved in data folder. </p>
+               <div class="FAQcontainer">
+                  <div id="FAQ-howto" class="FAQ-item">
+                     <h4><span class="expand-icon">+</span> How do I use this tool? </h4>
+                     <div id="FAQ-howto-expand" class="FAQ-expand">
+                        <p> visual inspect people's location on the map.<br> click on the marker icons to get more information.
+                          <img class="small-balloon" src="./lib/leaflet-1.3/dist/images/marker-icon.png"></p>
+                          <p> Click Add Bucket button to add another object.<br> </p>
+                          <p> Double click to zoom in.<br> </p>
+                          <p> Single Click an object to move it.<br> </p>
+
+                     </div>
+                  </div>
+
+               </div>
+               <p class="fineprint"><i> * This tool is for demo use only.</br>
+                 Please contact DiDacTex from more information.</i></br>
+                 copyright 2019.</i></p>
+
+            </div>
+            <div class="contentpanel footerpanel">
+               <div class="footer">
+                  <p class="footertext">Made with pride by</p>
+                  <a href="http://www.DiDacTex.com"><img class="logo firstlogo" src="./icons/logo.png" alt="DiDacTex Logo" /></a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="lib/jquery/jquery.js"></script>
+      <script src="lib/leaflet-1.3/dist/leaflet.js"></script>
+      <script src="lib/leaflet.markercluster-1.4/dist/leaflet.markercluster-src.js"></script>
+      <script src="lib/leaflet.awesomemarkers/leaflet.awesome-markers.min.js"></script>
+      <script src="lib/typeahead/typeahead.bundle.min.js"></script>
+      <script src="lib/jquery-placeholder/jquery.placeholder.min.js"></script>
+     <script src="js/drawLine.js"></script>
+     <script src="js/main.js"></script>
+
+
+   </body>
+</html>

@@ -1,0 +1,10 @@
+latitude,longitude,id,Description,team,freq,icon,active
+30.455,-86.71,Bob,TheIntern,Blue,123-456-2789,male_blue,NA
+30.465,-86.70,Jane,Catperson,Blue,123-345-6789,female_blue,NA
+30.4545,-86.731,Fred,Prankcaller,Red,121-345-6789,male_red,NA
+30.4595,-86.701,Sue,Dogwalker,Blue,123-456-7890,female_blue,NA
+30.4515,-86.741,Dred1,DRED,Blue,TBD,dredbucket,Yes
+30.4555,-86.745,Dred2,DRED,Red,freq3,dredbucket,Yes
+30.4574,-86.765,Dred3,DRED,Red,freq2,dredbucket,Yes
+30.4315,-86.751,Tough1,Tough,Blue,freq1,touchbucket,No
+30.4415,-86.721,Special2,DonotDisturb,Blue,freq4,specialbucket,Yes
