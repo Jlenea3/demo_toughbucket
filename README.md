@@ -28,9 +28,9 @@ Objects are initially populated from a csv file.
 
 ## WebApp
 
-The webapp is located on gh_pages branch of this repo.
+The webapp is located on gh-pages branch of this repo.
 You can get to it from here.
-[Demo Website](https://DiDacTexGit.github.io/demo_toughbucket)
+[Demo Website](https://DiDacTexGit.github.io/demo_toughbucket/)
 
 
 ### Viewing the app without nodejs
