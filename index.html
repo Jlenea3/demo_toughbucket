@@ -29,36 +29,55 @@
       <div id="resultspanel" class="resultspanel">
          <div class="contentpanel searchpanel">
             <div id="custom-templates">
-              <p> Assumed data provided as a toughdata.csv file.</p>
+
+                          <h2> Bucket Tracking:</h2>
+                            <p>Select a Bucket to see / change its info <br/></p>
+                            <h3><input class="typeahead" id="Id_00" type="text" placeholder="Unique Id" />
+                          </h3
+                            <p>
+
+                            <input class="typeahead" id="Input_00" type="text" placeholder="Phone/Frequency" />
+                            <select id="Icon_00" >
+                              <option value=touchbucket>Tough Bucket
+                              <option value=dredbucket>DRED Bucket
+                              <option value=specialbucket>Special Bucket
+                              <option value=female_blue>Blue Female
+                              <option value=female_red>Red Female
+                              <option value=male_blue>Blue male
+                              <option value=male_red>Red male
+                              <option value=Calboard>Calibration Board
+                              <option value=beans>Beans
+                            </select></p>
+                            <p> Latitude/Longitude: <br/>
+                            <input class="typeahead" id="Input_lat" type="text" placeholder=" Latitude" />
+                            <input class="typeahead" id="Input_long" type="text" placeholder=" Longitude" />
+                          </p>
+                            <select id="Active_00" >
+                              <option value=YES>Active
+                              <option value=NO>Not Active
+                              <option value=NA>Not Applicable
+                            </select>
+                            <select id="Team_00" >
+                              <option value=Blue>Blue Team
+                              <option value=Red>Red Team
+                              <option value=NA>Not Applicable
+                            </select>
+                            <br/><br/>
+                            <button id="add_marker-button" enabled class="btn btn-success">Add Bucket</button>
+                          </p>
+
+              <h3> Assumptions</h3>
+              <ul>
+                <li>Initial data provided as by the toughdata.csv file.</li>
+                <li>Only drop down menus and buttons push changes
+
+
+              </ul>
+              <hr>
               <p> Author: Evelyn J. Boettcher</p>
               <p> email: ejb@DiDacTex.com</p>
+              <hr>
             </br>
-            <h4> Bucket Tracking:</h4>
-              <p>Select a Bucket to see / change its info <br/></p>
-              <p>
-              <input class="typeahead" id="Input_00" type="text" placeholder="Phone/Frequency" />
-              <select id="Icon_00" >
-                <option value=touchbucket>Tough Bucket
-                <option value=dredbucket>DRED Bucket
-                <option value=specialbucket>Special Bucket
-                <option value=female_blue>Blue Female
-                <option value=female_red>Red Female
-                <option value=male_blue>Blue male
-                <option value=male_red>Red male
-                <option value=Calboard>Calibration Board
-                <option value=beans>Beans
-              </select></p>
-              <p> Latitude/Longitude: <br/>
-              <input class="typeahead" id="Input_lat" type="text" placeholder=" Latitude" />
-              <input class="typeahead" id="Input_long" type="text" placeholder=" Longitude" />
-            </p>
-              <select id="Active_00" >
-                <option value=YES>Active
-                <option value=NO>Not Active
-                <option value=NA>Not Applicable
-              </select>
-              <button id="add_marker-button" enabled class="btn btn-success">Add Bucket</button>
-            </p>
 
 
             </div>
@@ -71,7 +90,7 @@
 
          <div id="intropanel" class="intropanel">
             <div class="introcontainer">
-               <h1>DRED Location</h1>
+               <h2>DRED Location</h2>
                <p class="intro-paragraph"><strong>DiDacTex</strong> tool to display multiple users/bucket
                </br> Need users/bucket locations saved in data folder. </p>
                <div class="FAQcontainer">

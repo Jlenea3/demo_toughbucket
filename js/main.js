@@ -17,8 +17,8 @@ $("document").ready(function() {
   const HURLBURT = [30.455, -086.70];
   var Streetmap, Stamen_Terrain, Esri_WorldImagery, Roads;
   // infoTemplate is a string template for use with L.Util.template()
-  var infoTemplate = '<h2>Unique ID: {id}</h2>\
-                      <p>Info: {description}</p>\
+  var infoTemplate = '<h3>Unique ID: {id}</h3>\
+                      <p>Info: {freq}</p>\
                       <p>Team: {team}</p>' ;
 
   function drawmarkers(infoTemplate, locations){
@@ -72,6 +72,8 @@ $("document").ready(function() {
      document.getElementById('Input_00').value   = location.freq;
      document.getElementById('Icon_00').value    = location.icon;
      document.getElementById('Active_00').value  = location.active.toUpperCase();
+     document.getElementById('Team_00').value   = location.team;
+     document.getElementById('Id_00').value   =  location.id;
    }
 
 
@@ -87,8 +89,8 @@ $("document").ready(function() {
           icon: document.getElementById('Icon_00').value ,
           active: document.getElementById('Active_00').value,
           description: "User Added",
-          team: location.team,
-          id: location.id
+          team: document.getElementById('Team_00').value,
+          id: document.getElementById('Id_00').value
         };
         return temp_location
       }
@@ -197,20 +199,52 @@ $("document").ready(function() {
       var ll = get_userMarkerInfo();
       locations.push(ll);
       refresh();
-
    });
 
-
+   $('#Team_00').on('change',function(e){
+        var textd =  this.options[this.selectedIndex].value;
+        if (0<locations.length){
+          $('#selectedAddress').text(textd);
+          var location = locations[index];
+          location.team = textd;
+          refresh();
+      } else {
+        $('#selectedAddress').text("NO Marker");
+      }
+    });
+    $('#Input_00').on('change',function(e){
+         var textd =  this.value;
+         if (0<locations.length){
+           $('#selectedAddress').text(textd);
+           var location = locations[index];
+           location.freq = textd;
+            $('#selectedAddress').text(textd);
+       } else {
+         $('#selectedAddress').text("NO Marker");
+       }
+     });
+     $('#Id_00').on('change',function(e){
+          var textd =  this.value;
+          if (0<locations.length){
+            $('#selectedAddress').text(textd);
+            var location = locations[index];
+            location.id = textd;
+             $('#selectedAddress').text(textd);
+        } else {
+          $('#selectedAddress').text("NO Marker");
+        }
+      });
    $('#Active_00').on('change',function(e){
         var textd =  this.options[this.selectedIndex].value;
         if (0<locations.length){
           $('#selectedAddress').text(textd);
           var location = locations[index];
           location.active = textd;
+          refresh();
       } else {
         $('#selectedAddress').text("NO Marker");
       }
-      });
+    });
 
    $('#Icon_00').on('change',function(e){
         var textd =  this.options[this.selectedIndex].value;
