@@ -146,7 +146,7 @@ $("document").ready(function() {
   	  subdomains: 'abcd',
   	  ext: 'png'
     });
-    // https: also suppported.
+    // https: also supported.
     Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 	   attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
     });
@@ -269,8 +269,8 @@ $("document").ready(function() {
 
 
    function refresh(){
-     //Refesh Locations
-     //Currently it refeshes everything in Location!
+     //Refresh Locations
+     //Currently it refreshes everything in Location!
       mymap.removeLayer(allm);
       allm.clearLayers();
       var newIconsLayer=[];
@@ -287,9 +287,9 @@ $("document").ready(function() {
 
 
  function uiFixes() {
-    //JS to fix the Twitter Typeahead styling, as it is unmodifyable in the bower folder
+    //JS to fix the Twitter Typeahead styling, as it is unmodifiable in the bower folder
    $('.twitter-typeahead').css('display', '');
-   //Fix for the Twitter Typeahead styling of the pre tag causing issues with horizontal scrolling in conentpanel
+   //Fix for the Twitter Typeahead styling of the pre tag causing issues with horizontal scrolling in conentPanel
    $('pre').css("margin-left", "-50%");
  }
 
